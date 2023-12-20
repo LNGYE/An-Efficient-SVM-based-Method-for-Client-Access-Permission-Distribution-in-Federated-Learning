@@ -140,9 +140,9 @@ if __name__ == "__main__":
     '''
     # 创建文件保存本地客户端的local accuracy 和 global accuracy
     df = pd.DataFrame(columns=['client', 'accuracy'])
-    df.to_csv('实验测试结果/' + 'client_local_accuracy_{}.csv'.format(args.model_name), index=False)
+    df.to_csv('Experimental_test_results/' + 'client_local_accuracy_{}.csv'.format(args.model_name), index=False)
     df = pd.DataFrame(columns=['client', 'accuracy'])
-    df.to_csv('实验测试结果/' + 'client_global_accuracy_{}.csv'.format(args.model_name), index=False)
+    df.to_csv('Experimental_test_results/' + 'client_global_accuracy_{}.csv'.format(args.model_name), index=False)
     '''
 
     # 2. 随机获取（u,S）对
@@ -247,10 +247,10 @@ if __name__ == "__main__":
         checkpoint = torch.load(args.saved_su_model_path+file)
         file = file.rstrip(".tar")
         if checkpoint["accuracy_Su"] > checkpoint["accuracy_S"]:
-            with open("分类结果/1.txt", "a") as f:
+            with open("Classification_results/1.txt", "a") as f:
                 f.write(file+"\n")
         else:
-            with open("分类结果/0.txt", "a") as f:
+            with open("Classification_results/0.txt", "a") as f:
                 f.write(file+"\n")
 
     """
