@@ -17,7 +17,7 @@ partition: str = "noniid-labeldir"
 5. Classify the sample and save it in the classification result
 6. Training dataset construction, constructing 5 datasets respectively
 7. Each classifier classifies and outputs the results
-Main.py can be run directly
+#### Main.py can be run directly
 
 ### train.py:
 1. Train the collection of clients
